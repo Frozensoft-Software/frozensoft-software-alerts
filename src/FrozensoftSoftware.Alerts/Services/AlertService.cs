@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
-using FrozensoftSoftware.Alerts.Interfaces;
+﻿using FrozensoftSoftware.Alerts.Interfaces;
 using FrozensoftSoftware.Alerts.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using System.Collections.Generic;
+using System.Text.Json;
 
 namespace FrozensoftSoftware.Alerts.Services
 {
@@ -15,9 +16,6 @@ namespace FrozensoftSoftware.Alerts.Services
             _tempData = tempDataDictionaryFactory.GetTempData(contextAccessor.HttpContext);
         }
 
-        /// <exception cref="T:System.ArgumentNullException"><paramref name="key" /> is <see langword="null" />.</exception>
-        /// <exception cref="T:System.Collections.Generic.KeyNotFoundException">The property is retrieved and <paramref name="key" /> is not found.</exception>
-        /// <exception cref="T:System.NotSupportedException">The property is set and the <see cref="T:System.Collections.Generic.IDictionary`2" /> is read-only.</exception>
         public void AddAlert(string message, AlertStyles alertStyle = AlertStyles.Success, bool dismissible = true)
         {
             var alerts = _tempData.ContainsKey(Alert.TempDataKey)
@@ -31,7 +29,7 @@ namespace FrozensoftSoftware.Alerts.Services
                 Dismissable = dismissible
             });
 
-            _tempData[Alert.TempDataKey] = alerts;
+            _tempData[Alert.TempDataKey] = JsonSerializer.Serialize(alerts);
         }
     }
 }
