@@ -15,6 +15,9 @@ You can either use bootstrap or make your own classes for the Alerts.
          options.FileProviders.Add(new EmbeddedFileProvider(
              typeof(FrozensoftSoftware.Alerts.ViewComponents.Alerts.AlertsViewComponent).Assembly));
      });
+     
+     // Registers the Alert Service
+     services.AddScoped<IAlertService, AlertService>();
     ```
 3. If you have a _ViewImports.cshtml file add this to it:
    ```sh
