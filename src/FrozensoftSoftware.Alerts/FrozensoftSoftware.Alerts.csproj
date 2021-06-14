@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Authors>Eiromplays</Authors>
+    <Company>Frozensoft Software</Company>
+    <Description>Frozensoft Software Alerts is a package that allows you to easily send alerts to users in your ASP.NET Core project. You can either use bootstrap or make your own classes for the Alerts, just make sure they have the same names.</Description>
+    <RepositoryUrl>https://github.com/Frozensoft-Software/frozensoft-software-alerts</RepositoryUrl>
+    <RepositoryType></RepositoryType>
+    <PackageProjectUrl>https://github.com/Frozensoft-Software/frozensoft-software-alerts</PackageProjectUrl>
+    <PackageTags>eiromplays fss frozensoft software frozensoft-software alerts</PackageTags>
+    <PackageReleaseNotes>Frozensoft Software Alerts is a package that allows you to easily send alerts to users in your ASP.NET Core project. You can either use bootstrap or make your own classes for the Alerts, just make sure they have the same names.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="1.1.0" />
+  </ItemGroup>
+
+</Project>
