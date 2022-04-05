@@ -1,3 +1,5 @@
+#WARNING THIS PACKAGE IS NO LONGER BEING MAINTANED, AS I DID NOT END UP NEEDING IT
+
 Frozensoft Software Alerts is a package that allows you to easily send alerts to users in your ASP.NET Core project. 
 You can either use bootstrap or make your own classes for the Alerts.
 
